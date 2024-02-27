@@ -1,4 +1,11 @@
-# 💤 LazyVim
+# 💤 Jon's LazyVim Config
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Jon's Fkn LazyVim Config, nothing fancy.
+
+## Setup
+
+To set this up on mac go to your `~/.config` folder and run:
+
+```sh
+git clone git@github.com:jjhiggz/lazyvim-config.git nvim
+```
