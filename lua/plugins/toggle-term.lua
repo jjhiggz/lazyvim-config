@@ -2,7 +2,7 @@ return {
   "akinsho/toggleterm.nvim",
   config = true,
   cmd = "ToggleTerm",
-  build = ":ToggleTerm",
+  build = ":ToggleTermToggleAll",
   -- keys = { { "<F4>", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },
   keys = { { "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" } },
   opts = {
