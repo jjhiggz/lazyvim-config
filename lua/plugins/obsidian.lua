@@ -3,8 +3,8 @@ return {
   keys = {
     { "<leader>of", "<cmd>ObsidianQuickSwitch<cr>", desc = "ObsidianQuickSwitch" },
     {
-      "<leader>oo",
-      "<cmd>ObsidianOpen welcome",
+      "<leader>od",
+      '<cmd>ObsidianOpen "devslopes-tdl"<cr>',
       desc = "ObsidianOpen",
     },
     {

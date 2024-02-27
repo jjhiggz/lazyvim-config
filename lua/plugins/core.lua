@@ -5,6 +5,9 @@ return {
     opts = {
       colorscheme = "oxocarbon",
     },
+    checker = {
+      enabled = true,
+    },
 
     keys = {
       { "<leader>uz", "<cmd>set so=999<cr>", desc = "center cursor" },
