@@ -2,11 +2,14 @@ return {
   "akinsho/toggleterm.nvim",
   config = true,
   cmd = "ToggleTerm",
-  build = ":ToggleTermToggleAll",
-  -- keys = { { "<F4>", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },
-  keys = { { "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" } },
+  keys = {
+    { "<leader>t1", "<cmd>1ToggleTerm<cr>", desc = "Toggle Terminal 1" },
+    { "<leader>t2", "<cmd>2ToggleTerm<cr>", desc = "Toggle Terminal 2" },
+    { "<leader>t3", "<cmd>3ToggleTerm<cr>", desc = "Toggle Terminal 3" },
+    { "<leader>t|", "<cmd>3ToggleTerm direction=vertical width=1400<cr>", desc = "Toggle Terminal 3" },
+    { "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" },
+  },
   opts = {
-    open_mapping = [[<leader>tt]],
     direction = "horizontal",
     shade_filetypes = {},
     hide_numbers = true,

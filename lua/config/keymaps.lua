@@ -15,3 +15,5 @@ vim.keymap.set("n", "˙", "<cmd>vertical resize -1<cr>")
 vim.keymap.set("n", "¬", "<cmd>vertical resize +1<cr>")
 vim.keymap.set("n", "˚", "<cmd>horizontal resize +1<cr>")
 vim.keymap.set("n", "∆", "<cmd>horizontal resize -1<cr>")
+
+vim.keymap.del("n", "<leader>e")
