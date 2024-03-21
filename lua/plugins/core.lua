@@ -3,7 +3,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "minimal",
+      -- colorscheme = "minimal",
+      colorscheme = "catppuccin-frappe",
     },
     checker = {
       enabled = true,

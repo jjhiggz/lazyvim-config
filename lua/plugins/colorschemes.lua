@@ -4,8 +4,14 @@ return {
   { "shaunsingh/nord.nvim" },
   { "Yazeed1s/minimal.nvim" },
 
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  -- add catpuccin
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = false,
+    config = function()
+      require("catppuccin").setup({})
+    end,
+  },
   -- {
   --   "catppuccin/nvim",
   --   lazy = false,
