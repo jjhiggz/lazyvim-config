@@ -1,52 +1,6 @@
 return {
   "epwalsh/obsidian.nvim",
-  keys = {
-    { "<leader>of", "<cmd>ObsidianQuickSwitch<cr>", desc = "ObsidianQuickSwitch" },
-    {
-      "<leader>od",
-      '<cmd>ObsidianOpen "devslopes-tdl"<cr>',
-      desc = "ObsidianOpen",
-    },
-    {
-      "<leader>on",
-      "<cmd>ObsidianNew<cr>",
-      desc = "ObsidianNEw",
-    },
-    {
-      "<leader>ot",
-      "<cmd>ObsidianToday<cr>",
-      desc = "ObsidianToday",
-    },
-    {
-      "<leader>os",
-      "<cmd>ObsidianSearch<cr>",
-      desc = "ObsidianSearch",
-    },
-    {
-      "<leader>ol",
-      "<cmd>ObsidianLinks<cr>",
-      desc = "ObsidianLinks",
-    },
-    {
-      "<leader>owc",
-      "<cmd>ObsidianWorkspace code-notes<cr>",
-      desc = "ObsidianLinks",
-    },
-    {
-      "<leader>owc",
-      "<cmd>ObsidianWorkspace daily-notes<cr>",
-      desc = "ObsidianLinks",
-    },
-  },
   config = function()
-    -- Helps with formatting for concealled UI
-    local wk = require("which-key")
-    wk.register({
-      o = {
-        name = "Obsidian", -- optional group name
-      },
-    }, { prefix = "<leader>" })
-
     require("obsidian").setup({
       dir = "~/all-notes",
       version = "*", -- recommended, use latest release instead of latest commit
@@ -57,10 +11,14 @@ return {
       -- the workspace to the first workspace in the list whose `path` is a parent of the
       -- current markdown file being edited.
       workspaces = {
-        -- {
-        --   name = "all-notes",
-        --   path = "~/all-notes",
-        -- },
+        {
+          name = "all-notes",
+          path = "~/all-notes",
+        },
+        {
+          name = "devslopes",
+          path = "~/devslopes-notes/",
+        },
       },
 
       -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
@@ -248,7 +206,7 @@ return {
         -- Define how various check-boxes are displayed
         checkboxes = {
           -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
-          [" "] = { char = "☐", hl_group = "ObsidianTodo" },
+          [" "] = { char = "▢", hl_group = "ObsidianTodo" },
           ["x"] = { char = "✔", hl_group = "ObsidianDone" },
           [">"] = { char = "→", hl_group = "ObsidianRightArrow" },
           ["~"] = { char = "≋", hl_group = "ObsidianTilde" },

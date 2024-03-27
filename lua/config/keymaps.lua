@@ -17,3 +17,54 @@ vim.keymap.set("n", "˚", "<cmd>horizontal resize +1<cr>")
 vim.keymap.set("n", "∆", "<cmd>horizontal resize -1<cr>")
 
 vim.keymap.del("n", "<leader>e")
+
+local wk = require("which-key")
+
+-- Obsidian Configs
+vim.keymap.set("n", "<leader>ow", "<cmd>ObsidianWorkspace<cr>")
+vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>")
+vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<cr>")
+vim.keymap.set("n", "<leader>oc", "<cmd>ObsidianCheck<cr>")
+vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>")
+
+-- dailes
+vim.keymap.set("n", "<leader>odd", "<cmd>ObsidianToday<cr>")
+vim.keymap.set("n", "<leader>ody", "<cmd>ObsidianYesterday<cr>")
+vim.keymap.set("n", "<leader>ods", "<cmd>ObsidianDailies<cr>")
+vim.keymap.set("n", "<leader>odt", "<cmd>ObsidianTomorrow<cr>")
+
+-- follow link
+vim.keymap.set("n", "<leader>ofl", "<cmd>ObsidianFollowLink<cr>")
+vim.keymap.set("n", "<leader>ofv", "<cmd>ObsidianFollowLink vsplit<cr>")
+vim.keymap.set("n", "<leader>ofh", "<cmd>ObsidianFollowLink hsplit<cr>")
+
+vim.keymap.set("n", "<leader>or", "<cmd>ObsidianRename<cr>")
+
+-- follow link
+vim.keymap.set("v", "<leader>oll", "<cmd>ObsidianLink<cr>")
+vim.keymap.set("v", "<leader>oln", "<cmd>ObsidianLinkNew<cr>")
+vim.keymap.set("v", "<leader>ofs", "<cmd>ObsidianLinks<cr>")
+-- vim.keymap.set("n", "od", "<cmd>ObsidianOpen devslopes/Devslopes TDL<cr>")
+
+wk.register({
+  o = {
+    name = "Obsidian", -- optional group name
+    f = {
+      name = "follow / find",
+    },
+    l = {
+      l = "Link",
+      n = "New Link",
+      s = "Search",
+    },
+    d = {
+      name = "dailies",
+      {
+        d = "Today",
+        y = "Yesterday",
+        s = "Search",
+        t = "Tomorrow",
+      },
+    },
+  },
+}, { prefix = "<leader>" })
