@@ -4,9 +4,16 @@ return {
     {
       "<leader>ee",
       function()
-        require("neo-tree.command").execute({ toggle = true })
+        require("neo-tree.command").execute({ toggle = true, dir = vim.fn.getcwd() })
       end,
-      desc = "Files",
+      desc = "Files (CWD)",
+    },
+    {
+      "<leader>eE",
+      function()
+        require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").root() })
+      end,
+      desc = "Files (Root)",
     },
     {
       "<leader>eg",
@@ -26,6 +33,11 @@ return {
       "<leader>es",
       "<cmd>SymbolsOutline<cr>",
       desc = "SymbolsOutline",
+    },
+    {
+      "<leader>e.",
+      "<cmd>Neotree .<cr>",
+      desc = "Sync Neotree with CWD",
     },
   },
 }
