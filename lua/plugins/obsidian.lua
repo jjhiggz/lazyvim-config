@@ -34,9 +34,9 @@ return {
 
       daily_notes = {
         -- Optional, if you keep daily notes in a separate directory.
-        folder = "notes/dailies",
+        folder = "dailies",
         -- Optional, if you want to change the date format for the ID of daily notes.
-        date_format = "%Y-%m-%d",
+        date_format = "%m-%d-%y",
         -- Optional, if you want to change the date format of the default alias of daily notes.
         alias_format = "%B %-d, %Y",
         -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
@@ -56,6 +56,18 @@ return {
       mappings = {
         -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
         ["gf"] = {
+          action = function()
+            return require("obsidian").util.gf_passthrough()
+          end,
+          opts = { noremap = false, expr = true, buffer = true },
+        },
+        ["gd"] = {
+          action = function()
+            return require("obsidian").util.gf_passthrough()
+          end,
+          opts = { noremap = false, expr = true, buffer = true },
+        },
+        ["<cr>"] = {
           action = function()
             return require("obsidian").util.gf_passthrough()
           end,
@@ -207,9 +219,9 @@ return {
         checkboxes = {
           -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
           [" "] = { char = "▢", hl_group = "ObsidianTodo" },
-          ["x"] = { char = "✔", hl_group = "ObsidianDone" },
+          ["x"] = { char = "", hl_group = "ObsidianDone" },
           [">"] = { char = "→", hl_group = "ObsidianRightArrow" },
-          ["~"] = { char = "≋", hl_group = "ObsidianTilde" },
+          ["c"] = { char = "", hl_group = "ObsidianTilde" },
           -- Replace the above with this if you don't have a patched font:
           -- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
           -- ["x"] = { char = "✔", hl_group = "ObsidianDone" },
@@ -217,7 +229,13 @@ return {
           -- You can also add more custom ones...
         },
         -- Use bullet marks for non-checkbox lists.
-        bullets = { char = "•", hl_group = "ObsidianBullet" },
+        -- for halloween
+        -- bullets = { char = "󰮿", hl_group = "ObsidianBullet" },
+        --
+        -- for spring
+        bullets = { char = "🌸", hl_group = "ObsidianBullet" },
+        -- For BDAY
+        -- bullets = { char = "🎂", hl_group = "ObsidianBullet" },
         external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
         -- Replace the above with this if you don't have a patched font:
         -- external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
@@ -230,7 +248,7 @@ return {
           ObsidianDone = { bold = true, fg = "#89ddff" },
           ObsidianRightArrow = { bold = true, fg = "#f78c6c" },
           ObsidianTilde = { bold = true, fg = "#ff5370" },
-          ObsidianBullet = { bold = true, fg = "#89ddff" },
+          ObsidianBullet = { bold = true, fg = "#FF7518" },
           ObsidianRefText = { underline = true, fg = "#c792ea" },
           ObsidianExtLinkIcon = { fg = "#c792ea" },
           ObsidianTag = { italic = true, fg = "#89ddff" },

@@ -4,10 +4,11 @@ return {
   "nvim-telescope/telescope.nvim",
   keys = {
     -- disable the keymap to grep files
-    { "<leader>/", false },
+    -- { "<leader>/", false },
     -- change a keymap
     { "<leader>ff", LazyVim.telescope("files"), { cwd = false }, desc = "Find Files (cwd)" },
     { "<leader>fF", LazyVim.telescope("files", { cwd = false }), desc = "Find Files (root)" },
+    { "<leader>fC", LazyVim.telescope("commands"), desc = "Find Commands" },
     -- add a keymap to browse plugin files
     {
       "<leader>fp",

@@ -4,7 +4,8 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "minimal",
-      colorscheme = "catppuccin-frappe",
+      -- colorscheme = "catppuccin-frappe",
+      colorscheme = "gruvbox",
     },
     checker = {
       enabled = true,

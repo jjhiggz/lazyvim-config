@@ -11,11 +11,17 @@ vim.keymap.del("i", "<A-k>")
 vim.keymap.del("v", "<A-j>")
 vim.keymap.del("v", "<A-k>")
 
+-- alt h
 vim.keymap.set("n", "˙", "<cmd>vertical resize -1<cr>")
+-- alt l
 vim.keymap.set("n", "¬", "<cmd>vertical resize +1<cr>")
+-- alt k
 vim.keymap.set("n", "˚", "<cmd>horizontal resize +1<cr>")
+-- alt j
 vim.keymap.set("n", "∆", "<cmd>horizontal resize -1<cr>")
 
+-- Want to have more flexible buffer opening
+-- see neotree.lua for mappings
 vim.keymap.del("n", "<leader>e")
 
 local wk = require("which-key")
@@ -27,7 +33,7 @@ vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<cr>")
 vim.keymap.set("n", "<leader>oc", "<cmd>ObsidianCheck<cr>")
 vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>")
 
--- dailes
+-- dailies
 vim.keymap.set("n", "<leader>odd", "<cmd>ObsidianToday<cr>")
 vim.keymap.set("n", "<leader>ody", "<cmd>ObsidianYesterday<cr>")
 vim.keymap.set("n", "<leader>ods", "<cmd>ObsidianDailies<cr>")
@@ -68,3 +74,6 @@ wk.register({
     },
   },
 }, { prefix = "<leader>" })
+
+vim.keymap.set("n", "<BS>", "<cmd>BufSurfBack<cr>")
+vim.keymap.set("n", "<leader><BS>", "<cmd>BufSurfForward<cr>")
