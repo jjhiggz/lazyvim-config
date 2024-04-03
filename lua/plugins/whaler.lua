@@ -22,6 +22,7 @@ return {
             "~/all-notes",
             "~/Projects/",
             "~/devslopes-notes/",
+            "~/devslopes-notes/projects/",
             {
               path = "~/devslopes-notes/",
               alias = "work notes",
