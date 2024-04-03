@@ -34,10 +34,11 @@ vim.keymap.set("n", "<leader>oc", "<cmd>ObsidianCheck<cr>")
 vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>")
 
 -- dailies
-vim.keymap.set("n", "<leader>odd", "<cmd>ObsidianToday<cr>")
-vim.keymap.set("n", "<leader>ody", "<cmd>ObsidianYesterday<cr>")
-vim.keymap.set("n", "<leader>ods", "<cmd>ObsidianDailies<cr>")
-vim.keymap.set("n", "<leader>odt", "<cmd>ObsidianTomorrow<cr>")
+vim.keymap.set("n", "<leader>ood", "<cmd>ObsidianToday<cr>")
+vim.keymap.set("n", "<leader>ooy", "<cmd>ObsidianYesterday<cr>")
+vim.keymap.set("n", "<leader>oos", "<cmd>ObsidianDailies<cr>")
+vim.keymap.set("n", "<leader>oot", "<cmd>ObsidianTomorrow<cr>")
+vim.keymap.set("n", "<leader>oog", "<cmd>ObsidianQuickSwitch global-tasks<cr>")
 
 -- follow link
 vim.keymap.set("n", "<leader>ofl", "<cmd>ObsidianFollowLink<cr>")
@@ -63,13 +64,14 @@ wk.register({
       n = "New Link",
       s = "Search",
     },
-    d = {
-      name = "dailies",
+    o = {
+      name = "organization",
       {
         d = "Today",
         y = "Yesterday",
         s = "Search",
         t = "Tomorrow",
+        g = "Global",
       },
     },
   },

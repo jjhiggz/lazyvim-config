@@ -34,7 +34,7 @@ return {
 
       daily_notes = {
         -- Optional, if you keep daily notes in a separate directory.
-        folder = "dailies",
+        folder = "organization/daily-notes",
         -- Optional, if you want to change the date format for the ID of daily notes.
         date_format = "%m-%d-%y",
         -- Optional, if you want to change the date format of the default alias of daily notes.
@@ -233,7 +233,7 @@ return {
         -- bullets = { char = "󰮿", hl_group = "ObsidianBullet" },
         --
         -- for spring
-        -- bullets = { char = "🌸", hl_group = "ObsidianBullet" },
+        bullets = { char = "🌸", hl_group = "ObsidianBullet" },
         -- For BDAY
         -- bullets = { char = "🎂", hl_group = "ObsidianBullet" },
         external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
