@@ -10,9 +10,9 @@ return {
         cursor = true,
         folds = true,
         -- There are conflicts with how Obsidian resolves paths, if I can get this sorted it would be super nice
-        links = false,
+        links = true,
         -- There are conflicts on how
-        paths = false,
+        paths = true,
         lists = true,
         maps = true,
         tables = true,

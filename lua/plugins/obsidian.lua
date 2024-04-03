@@ -233,7 +233,7 @@ return {
         -- bullets = { char = "󰮿", hl_group = "ObsidianBullet" },
         --
         -- for spring
-        bullets = { char = "🌸", hl_group = "ObsidianBullet" },
+        -- bullets = { char = "🌸", hl_group = "ObsidianBullet" },
         -- For BDAY
         -- bullets = { char = "🎂", hl_group = "ObsidianBullet" },
         external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
