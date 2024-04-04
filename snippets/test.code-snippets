@@ -1,0 +1,10 @@
+{
+  "Information Admonition": {
+    "prefix": "ad-info",
+    "body": [
+      "> [!info]",
+      "> ${1:text}"
+    ],
+    "description": "Information Admonition"
+  }
+}

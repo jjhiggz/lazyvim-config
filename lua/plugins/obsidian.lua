@@ -26,7 +26,7 @@ return {
       -- dir = "~/vaults/work",
 
       -- Optional, if you keep notes in a specific subdirectory of your vault.
-      notes_subdir = "notes",
+      -- notes_subdir = "notes",
 
       -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
       -- levels defined by "vim.log.levels.*".
@@ -40,7 +40,7 @@ return {
         -- Optional, if you want to change the date format of the default alias of daily notes.
         alias_format = "%B %-d, %Y",
         -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-        template = nil,
+        template = "~/all-notes/templates/daily-notes-template.md",
       },
 
       -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
@@ -222,9 +222,6 @@ return {
           ["x"] = { char = "", hl_group = "ObsidianDone" },
           [">"] = { char = "→", hl_group = "ObsidianRightArrow" },
           ["c"] = { char = "", hl_group = "ObsidianTilde" },
-          -- Replace the above with this if you don't have a patched font:
-          -- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
-          -- ["x"] = { char = "✔", hl_group = "ObsidianDone" },
 
           -- You can also add more custom ones...
         },
